@@ -83,7 +83,7 @@ type GLTFResult = GLTF & {
 
 export default function Headphones(props: JSX.IntrinsicElements["group"]) {
   const { nodes, materials } = useGLTF(
-    "/headphones.glb"
+    "./headphones.glb"
   ) as unknown as GLTFResult;
 
   const headphones = useRef<THREE.Group>(null);
@@ -377,4 +377,4 @@ export default function Headphones(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/headphones.glb");
+useGLTF.preload("./headphones.glb");
